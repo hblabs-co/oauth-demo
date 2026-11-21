@@ -1,0 +1,13 @@
+version: "3.9"
+
+# docker compose up -d
+
+services:
+  oauth:
+    container_name: oauth
+    image: hblabs.co/oauth
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8080:8080
